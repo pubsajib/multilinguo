@@ -1,0 +1,15 @@
+.dropdown-toggle::after{
+	content: '>';
+	border: 0;
+	margin: 0;
+	transform: rotate(90deg);
+	vertical-align: baseline;
+}
+.topNav{background: blue; color: #fff;padding: 8px 0;font-size: 13px;}
+.topNav ul{margin: 0;}
+.topNav ul li{}
+.topNav ul li a, 
+.topNav ul li a span{ color: #fff; cursor: pointer;}
+.topNav ul li .dropdown-menu a, 
+.topNav ul li .dropdown-menu a span{ color: #000; cursor: pointer;}
+.topNav ul li a:hover{text-decoration: none;}
