@@ -1,11 +1,48 @@
+/*FONTS*/
+@font-face {
+    font-family: 'mulisemibold';
+    src: url('../fonts/muli-semibold-webfont.woff2') format('woff2'),
+         url('../fonts/muli-semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'nanumgothicbold';
+    src: url('../fonts/nanumgothic-bold-webfont.woff2') format('woff2'),
+         url('../fonts/nanumgothic-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+body{background-color: #fff;}
+.button{text-align: center;padding: 5px 10px;color: #fff;line-height: 1;}
+.buttonLg{padding: 11px 27px; font-size: 24px;}
+.buttonRadius{border-radius: 5px;}
+.buttonCircled{border-radius: 17px; padding: 12px 26px; font-size: 12px; letter-spacing: 1px;}
+.button:hover{text-decoration: none;color: #fff;}
+/*COLORS*/
+.paste{background-color: #50cfc8;}
+.orange{background-color: #ebaf19;}
+.white{background-color: #fff; color: #c6ae75;}
+.row-eq-height {display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; }
+/*CUSTOM */
+.srinked .container{max-width: 900px;}
+.bgTest{background-color: #d5d5d5;}
+.borderTest{border: 1px solid #d5d5d5;}
 .dropdown-toggle::after{
+	/*display: inherit;*/
 	content: '>';
 	border: 0;
 	margin: 0;
 	transform: rotate(90deg);
 	vertical-align: baseline;
+	height: auto;
+	width: auto;
+	font-weight: 700;
+	margin-left: 3px;
 }
-.topNav{background: blue; color: #fff;padding: 8px 0;font-size: 13px;}
+.topNav{background: url(../images/header_top_bg.png); color: #fff;padding: 8px 0;font-size: 13px;}
 .topNav ul{margin: 0;}
 .topNav ul li{}
 .topNav ul li a, 
@@ -13,3 +50,73 @@
 .topNav ul li .dropdown-menu a, 
 .topNav ul li .dropdown-menu a span{ color: #000; cursor: pointer;}
 .topNav ul li a:hover{text-decoration: none;}
+header{padding:10px 0 20px 0; }
+.banner {
+	background-image: url(../images/content.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: auto;
+	color: #fff;
+	padding: 94px 0 230px;
+	margin-bottom: 50px;
+	font-family: mulisemibold;
+	/* font-family: nanumgothicbold; */
+}
+
+.banner .title {margin-bottom: 0px;font-size: 47px;text-transform: capitalize;}
+.banner .subTitle {margin-bottom: 25px;font-size: 67px;}
+.banner .buttonContainer{padding-left: 50px;padding-top: 22px;}
+.banner .buttonContainer .button{font-size: 32px;}
+
+.btn {padding: 9px 18px; border-radius: 8px; }
+.btn-primary {margin-left: 35px; }
+/*.....blog......*/
+.blog {padding:  50px 0; }
+.blog .item{text-align: center;background-repeat: no-repeat;}
+.blog .item img{max-width: 100%;}
+
+.blog2 {padding:  50px 0; }
+.blog2 .item{text-align: center;padding: 0 52px;}
+.blog2 .item img{max-width: 100%;}
+.blog2 .item .title{max-width: 100%;}
+.blog2 .item .content{max-width: 100%;}
+
+.boxWrapper {padding:  50px 0; text-align: center; color: #fff;}
+.boxWrapper .item{padding: 20px 30px 70px 30px;}
+.boxWrapper .item .imgContainer{height: 100px;width: 100px;margin: 0 auto;padding-top: 20px;border: 1px dotted #fff; border-radius: 50%;}
+.boxWrapper .item .imgContainer img{width: 60px; }
+.boxWrapper .item .title{max-width: 170px;margin: 12px auto 20px auto;}
+.boxWrapper .item .content{max-width: 100%;}
+.boxWrapper .home{background-color: #4497ff; border-top-left-radius: 8px; border-bottom-left-radius: 8px;}
+.boxWrapper .teacher{background-color: #51cec8;}
+.boxWrapper .language{background-color: #efad1a; border-top-right-radius: 8px; border-bottom-right-radius: 8px;}
+
+.signUp{
+	background-image: url(../images/bg_all.jpg);
+	background-position: top right;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: auto;
+	color: #fff;
+
+}
+.signUp .contentWrapper{padding: 122px 0 50px 0;}
+.signUp .contentWrapper .title{font-size: 2rem; }
+.signUp .contentWrapper .subTitle{max-width: 365px; margin-top: 23px; }
+.signUp .contentWrapper .content{margin-top: 34px; font-size: 18px; }
+.signUp .contentWrapper .getStarted{margin-top: 25px; }
+.signUp .contentWrapper .contactUs{margin-top: 3px; }
+
+.banner2{
+	background-image: url(../images/books.png), url(../images/globe.png);
+	background-position: left bottom, right bottom;
+	background-repeat: no-repeat, no-repeat;
+	text-align: center;
+	color: #fff;
+	padding: 72px 0;
+}
+.banner2 .title{font-size: 2.5rem; } 
+.banner2 .content{font-size: 1.2rem; }
+
+
