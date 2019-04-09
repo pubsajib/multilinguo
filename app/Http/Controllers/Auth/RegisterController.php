@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
+use App\Role;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -35,8 +36,7 @@ class RegisterController extends Controller
      *
      * @return void
      */
-    public function __construct()
-    {
+    public function __construct() {
         $this->middleware('guest');
     }
 
@@ -61,12 +61,17 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \App\User
      */
-    protected function create(array $data)
-    {
-        return User::create([
+    protected function create(array $data) {
+        $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
+
+        $role = Role::where('name', $data['role'])->firstOrFail();
+        $user->attachRole($role);
+        if ($data['role'] =='teacher') $this->redirectTo = '/teacher';
+        else if ($data['role'] =='student') $this->redirectTo = '/student';
+        return $user;
     }
 }
