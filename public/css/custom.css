@@ -15,7 +15,8 @@ FONTS*/
     font-style: normal;
 }
 
-
+a{cursor:pointer;}
+a:hover, a:focus, a:active{text-decoration: none;}
 body{background-color: #fff;}
 h1,h2,h3,h4,h5{font-family: 'Berlin Sans FB Demi';}
 .button{text-align: center;padding: 5px 10px;color: #fff;line-height: 1;cursor: pointer; font-family: 'Berlin Sans FB Demi';}
@@ -52,6 +53,7 @@ h1,h2,h3,h4,h5{font-family: 'Berlin Sans FB Demi';}
 .topNav ul{margin: 0;}
 .topNav ul li{}
 .topNav ul li a, 
+.topNav ul li a.list-inline-item, 
 .topNav ul li a span{ color: #fff; cursor: pointer;}
 .topNav ul li .dropdown-menu a, 
 .topNav ul li .dropdown-menu a span{ color: #000; cursor: pointer;}
@@ -139,3 +141,26 @@ header{padding:15px 0 25px 0; }
 	height: 30px;
 	background: #999;
 } 
+*/
+footer{padding: 30px 0 20px 0;}
+footer .container{padding: 15px 0 0px 0;}
+.BT{border-top: 1px solid #000;}
+footer ul li a{color: #000; font-weight: 400;}
+
+/*TABS*/
+.nav-tabs{border:none;}
+.nav-tabs .nav-link {
+    color: #495057;
+    border: 0px solid transparent;
+    border-radius: 0;
+}
+.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link, 
+.nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
+    background-color: transparent;
+    background-image: url(../images/border.png);
+    background-repeat: no-repeat;
+  	background-size: 80% 2px;
+  	background-position: bottom center;
+
+	
+}

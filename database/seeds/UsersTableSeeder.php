@@ -7,6 +7,7 @@ class UsersTableSeeder extends Seeder {
                 'name'          => 'Student 01',
                 'email'         => 'student_01@gmail.com',
                 'password'      => bcrypt('12345678'), 
+                'role_id'      => 3,
                 'email_verified_at'    => date("Y-m-d h:i:s"),
                 'created_at'    => date("Y-m-d h:i:s"), 
                 'updated_at'    => date("Y-m-d h:i:s")
@@ -15,6 +16,7 @@ class UsersTableSeeder extends Seeder {
                 'name'          => 'Student 02',
                 'email'         => 'student_02@gmail.com',
                 'password'      => bcrypt('12345678'), 
+                'role_id'      => 3,
                 'email_verified_at'    => date("Y-m-d h:i:s"),
                 'created_at'    => date("Y-m-d h:i:s"), 
                 'updated_at'    => date("Y-m-d h:i:s")
@@ -23,6 +25,7 @@ class UsersTableSeeder extends Seeder {
                 'name'          => 'Student 03',
                 'email'         => 'student_03@gmail.com',
                 'password'      => bcrypt('12345678'), 
+                'role_id'      => 3,
                 'email_verified_at'    => date("Y-m-d h:i:s"),
                 'created_at'    => date("Y-m-d h:i:s"), 
                 'updated_at'    => date("Y-m-d h:i:s")
@@ -31,6 +34,7 @@ class UsersTableSeeder extends Seeder {
                 'name'          => 'Teacher 01',
                 'email'         => 'teacher_01@gmail.com',
                 'password'      => bcrypt('12345678'), 
+                'role_id'      => 2,
                 'email_verified_at'    => date("Y-m-d h:i:s"),
                 'created_at'    => date("Y-m-d h:i:s"), 
                 'updated_at'    => date("Y-m-d h:i:s")

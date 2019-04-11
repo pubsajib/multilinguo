@@ -5,13 +5,8 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Zizaco\Entrust\Traits\EntrustUserTrait;
-
-// use Illuminate\Auth\UserInterface;
-// use Illuminate\Auth\Reminders\RemindableInterface;
-// use Zizaco\Entrust\HasRole;
 class User extends Authenticatable implements MustVerifyEmail {
-    use Notifiable, EntrustUserTrait;
+    use Notifiable;
     // use Notifiable;
 
     /**

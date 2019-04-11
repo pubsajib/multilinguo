@@ -62,14 +62,14 @@ class RegisterController extends Controller
      * @return \App\User
      */
     protected function create(array $data) {
+        $role = Role::where('name', $data['role'])->first();
         $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
+            'role_id' => $role->id,
             'password' => Hash::make($data['password']),
         ]);
 
-        $role = Role::where('name', $data['role'])->firstOrFail();
-        $user->attachRole($role);
         if ($data['role'] =='teacher') $this->redirectTo = '/teacher';
         else if ($data['role'] =='student') $this->redirectTo = '/student';
         return $user;

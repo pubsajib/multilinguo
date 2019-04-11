@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Auth;
+use App\Role;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
@@ -42,8 +43,11 @@ class LoginController extends Controller
         $request->session()->regenerate();
 
         $this->clearLoginAttempts($request);
-        if ($this->guard()->user()->hasRole('student'))  $this->redirectTo = '/student';
-        else if ($this->guard()->user()->hasRole('teacher'))  $this->redirectTo = '/teacher';
+        // CUSTOM REDIRECTION
+        $role = Role::findOrFail($this->guard()->user()->role_id);
+        if ($role->name == 'student')  $this->redirectTo = '/student';
+        else if ($role->name == 'teacher')  $this->redirectTo = '/teacher';
+
         return $this->authenticated($request, $this->guard()->user())
                 ?: redirect()->intended($this->redirectPath());
     }

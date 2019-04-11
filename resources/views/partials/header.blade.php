@@ -8,7 +8,7 @@
             </ul>
             <ul class="list-inline float-right ml-auto">
                 <li class="list-inline-item nav-item dropdown"> 
-                    <a id="navbarDropdown" class="dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre> Languages </a>
+                    <a id="navbarDropdown" class="dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre> <i class="fas fa-globe" aria-hidden="true"></i> Languages </a>
 
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="#">En</a>
@@ -17,9 +17,9 @@
                 </li>
                 <li class="list-inline-item"> | </li>
                 @guest
-                    <li class="list-inline-item"> <a href="{{ route('loginregister') }}">Login / Register</a> </li>
+                    <li class="list-inline-item"> <a href="{{ route('loginregister') }}"><i class="fas fa-lock"></i> Login / Register</a> </li>
                 @else
-                    <a class="list-inline-item" href="{{ route('logout') }}"onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> {{ __('Logout') }} </a>
+                    <li class="list-inline-item"> <a class="list-inline-item" href="{{ route('logout') }}"onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> <i class="fas fa-unlock-alt" aria-hidden="true"></i> </i> {{ __('Logout') }} </a></li>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;"> @csrf </form>
                 @endguest
             </ul>
